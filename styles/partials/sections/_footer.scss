@@ -1,0 +1,90 @@
+.footer {
+    background: color(neutral-very-dark-blue);
+    padding: $margin;
+    @include flexCenter();
+
+    .footer--wrap {
+        width: 100%;
+        max-width: $max-width;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include mobileSize {
+            flex-direction: column;
+        }
+
+        .logo-and-links--wrap {
+            display: flex;
+            align-items: center;
+
+            @include mobileSize {
+                flex-direction: column;
+            }
+
+            .footer__logo {
+                width: 148px;
+                height: 25px;
+            }
+
+            .footer__ul {
+                display: flex;
+                list-style-type: none;
+                margin-left: 3em;
+
+                @include mobileSize {
+                    flex-direction: column;
+                    margin: 2em 0;
+                }
+
+                .footer__li {
+                    @include mobileSize {
+                        text-align: center;
+                    }
+                    .footer__links {
+                        color: white;
+                        font-size: 1.4rem;
+                        letter-spacing: 0.15em;
+                        transition: color 0.25s;
+                        &:hover {
+                            color: color(primary-red);
+                        }
+                    }
+                    & + .footer__li {
+                        margin-left: 2em;
+
+                        @include mobileSize {
+                            margin-left: 0;
+                            margin-top: 1em;
+                        }
+                    }
+                }
+            }
+        }
+        .social--wrap {
+            display: flex;
+            align-items: center;
+
+            // .twitter-icon {
+            //     margin-left: 1.5em;
+            // }
+
+            a {
+                display: block;
+
+                & + a {
+                    margin-left: 2em;
+                }
+            }
+
+            i {
+                color: white;
+                transition: color 0.25s;
+            }
+
+            .facebook-icon:hover,
+            .twitter-icon:hover {
+                color: color(primary-red);
+            }
+        }
+    }
+}

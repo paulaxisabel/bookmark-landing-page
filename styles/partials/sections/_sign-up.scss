@@ -1,0 +1,97 @@
+.sign-up-section {
+    background: color(primary-blue);
+    @include flexCenter(column);
+    justify-content: start;
+    padding: 2em 2em 3em 2em;
+    min-height: 300px;
+
+    @include mobileSize {
+        padding: 2em;
+    }
+
+    .sign-up-section--wrap {
+        // outline: solid black 2px;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .sign-up__h2 {
+            margin-top: 1em;
+            color: white;
+            font-weight: 400;
+            font-size: clamp(2.4rem, 5vw, 3.2rem);
+            max-width: 20ch;
+        }
+
+        .sign-up__p {
+            color: white;
+            font-size: 1.2rem;
+            letter-spacing: 0.25em;
+        }
+
+        .contact--wrap {
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5em;
+            width: 100%;
+
+            @include mobileSize {
+                flex-wrap: wrap;
+            }
+            .input--wrap {
+                position: relative;
+                z-index: 2;
+                display: flex;
+                width: 100%;
+
+                &.error::after {
+                    content: "Whoops, make sure it's an email";
+                    position: absolute;
+                    z-index: -1;
+                    bottom: -2rem;
+                    width: 100%;
+                    height: 2.5rem;
+                    background: color(primary-red);
+                    border-radius: 0 0 5px 5px;
+                    text-align: start;
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    padding: 0 1em;
+                    font-size: 1.2rem;
+                }
+                .contact__input {
+                    width: 100%;
+                    padding: 0.75em 2em 0.75em 1em;
+                    font-family: "Rubik", sans-serif;
+                    font-size: 1.6rem;
+                    color: color(neutral-very-dark-blue);
+                    border-radius: 5px;
+                    border: solid white 2px;
+
+                    &.error {
+                        border: color(primary-red) 2px solid;
+                    }
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                .error-img {
+                    display: none;
+                    position: absolute;
+                    right: 0.5em;
+                    top: 25%;
+
+                    &.active {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

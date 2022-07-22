@@ -1,0 +1,125 @@
+button {
+    font-family: "Rubik", sans-serif;
+    cursor: pointer;
+}
+
+.blue {
+    background: color(primary-blue);
+    border: solid color(primary-blue) 2px;
+    color: white;
+
+    &:hover {
+        background: white;
+        color: color(primary-blue);
+    }
+}
+
+.red {
+    background: color(primary-red);
+    border: solid color(primary-red) 2px;
+    color: white;
+
+    &:hover {
+        background: white;
+        color: color(primary-red);
+    }
+}
+
+.white {
+    background: white;
+    color: color(neutral-very-dark-blue);
+    border: solid white 2px;
+
+    &:hover {
+        border: solid color(neutral-very-dark-blue) 2px;
+    }
+}
+
+// these are the common styles for the buttons in the website
+.button {
+    padding: 0.75em 1em;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 1.6rem;
+    box-shadow: $box-shadow;
+    text-decoration: none;
+    display: block;
+    transition: box-shadow 0.2s;
+
+    &:hover {
+        box-shadow: none;
+    }
+}
+//.
+//                                                specific styles
+//.
+
+// login button in the navbar
+.login-btn {
+    padding: 0.5em 1.75em;
+    letter-spacing: 0.15rem;
+
+    @include mobileSize {
+        background: none;
+        border: solid white 2px;
+        width: 100%;
+    }
+}
+// hero section button wrap styles
+.hero-info__buttons--wrap {
+    display: flex;
+    margin-top: 1em;
+    a {
+        display: block;
+        text-decoration: none;
+        width: max-content;
+        font-size: 1.6rem;
+
+        & + a {
+            margin-left: 1em;
+        }
+
+        @include mobileSize {
+            font-size: 1.4rem;
+        }
+    }
+}
+
+// buttons for the feature tabs section
+.features__btn {
+    margin: 1em 0 0 0;
+    width: max-content;
+
+    @include mobileSize {
+        margin: 1em auto 0 auto;
+    }
+}
+
+// download section buttons
+.card__button {
+    margin-top: 4em;
+    width: 100%;
+    text-align: center;
+}
+
+// accordion section "more info" button
+.more-info {
+    margin: 3em 0 0 0;
+    width: max-content;
+}
+
+// sign-up section "contact us" button
+.contact__btn {
+    white-space: nowrap;
+    margin-left: 1em;
+
+    @include mobileSize {
+        width: 100%;
+        margin-left: 0;
+        margin: 1em 0;
+
+        &.mobile-active {
+            margin: 2em 0 1em 0;
+        }
+    }
+}

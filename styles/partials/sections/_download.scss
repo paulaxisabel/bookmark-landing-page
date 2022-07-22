@@ -1,0 +1,129 @@
+.download-section {
+    margin: 7em 0;
+
+    @include mobileSize {
+        margin: 3em 0;
+    }
+    &__header {
+        margin: 0 $margin;
+        // background: rgba(255, 0, 0, 0.404);
+        text-align: center;
+        @include flexCenter(column);
+    }
+
+    &__p {
+        max-width: 47ch;
+    }
+
+    &__h2 {
+        font-size: clamp(2.4rem, 5vw, 3.2rem);
+    }
+
+    &__card--wrap {
+        // background: rgba(0, 128, 0, 0.281);
+        display: flex;
+        justify-content: center;
+        height: 47.5rem;
+        margin-top: 3em;
+        padding: 2em;
+
+        @include mobileSize {
+            flex-direction: column;
+            height: unset;
+            margin-top: 1em;
+        }
+
+        .card-container {
+            // outline: solid black 2px;
+
+            @include mobileSize {
+                display: grid;
+                place-items: center;
+            }
+
+            .card {
+                background: white;
+                box-shadow: $box-shadow;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 1.5em;
+                border-radius: 10px;
+                position: relative;
+
+                @include mobileSize {
+                    max-width: 400px;
+                    width: 100%;
+                }
+
+                // + .card {
+                //     margin-left: 2em;
+                // }
+
+                &__img {
+                    width: 100px;
+                    // height: 100px;
+                }
+
+                &__info--wrap {
+                    text-align: center;
+                    margin-top: 1em;
+
+                    .info__p {
+                        margin-top: 0.5em;
+                        font-size: 1.5rem;
+                    }
+
+                    .info__h3 {
+                        font-size: 2rem;
+                    }
+                }
+
+                // &__button {
+                //     margin-top: 1em;
+                //     text-decoration: none;
+                //     background: color(primary-blue);
+                //     color: white;
+                //     margin-top: 4em;
+                //     width: 100%;
+                //     text-align: center;
+
+                //     &:hover {
+                //         background: white;
+                //         color: color(primary-blue);
+                //         outline: solid color(primary-blue) 0.15em;
+                //         box-shadow: none;
+                //     }
+                // }
+
+                &__bg {
+                    width: 100%;
+                    position: absolute;
+                    bottom: 5.25em;
+                }
+            }
+
+            .margin {
+                margin: 0 1.5em;
+
+                @include mobileSize {
+                    margin: 1.5em 0;
+                }
+            }
+        }
+
+        .firefox-container {
+            display: grid;
+            place-items: center;
+        }
+
+        .opera-container {
+            display: grid;
+            place-items: end;
+
+            @include mobileSize {
+                place-items: center;
+            }
+        }
+    }
+}

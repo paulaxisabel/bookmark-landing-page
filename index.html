@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <!-- displays site properly based on user's device -->
+ <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+ <script src="https://kit.fontawesome.com/207165ede1.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="css/styles.css" />
+
+ <title>Bookmark landing page</title>
+ <style>
+  .attribution {
+      font-size: 11px;
+      text-align: center;
+  }
+  .attribution a {
+      color: hsl(228, 45%, 44%);
+  }
+ </style>
+</head>
+
+<body>
+ <div class="website--grid">
+  <header class="header" id="header">
+   <nav class="nav">
+    <img src="images/logo-bookmark.svg" alt="logo" class="nav__img" />
+    <img src="images/logo-bookmark-white.svg" alt="logo" class="nav__img--white" />
+    <button id="nav__hamburger">
+     <img src="images/icon-hamburger.svg" alt="navigation menu button" class="hamburger-img" />
+     <img src="images/icon-close.svg" alt="navigation close button" class="x-img" />
+    </button>
+    <div class="nav__links--wrap">
+     <ul class="links__ul">
+      <hr />
+      <li><a class="nav-links" href="">Features</a></li>
+      <hr />
+      <li><a class="nav-links" href="">Pricing</a></li>
+      <hr />
+      <li><a class="nav-links" href="">Contact</a></li>
+      <hr />
+      <li><a class="login-btn button red" href="">LOGIN</a> </li>
+     </ul>
+     <div class="nav-social-links--wrap">
+      <a> <i class="fab  fa-facebook-square fa-lg facebook-icon"></i> </a>
+      <a> <i class="fab fa-twitter fa-lg twitter-icon"></i> </a>
+     </div>
+    </div>
+   </nav>
+  </header>
+  <main>
+
+   <!-- Hero Section -->
+   <section class="hero-section">
+    <div class="hero-grid--container">
+     <div class="hero-info">
+      <div class="hero-info--wrap">
+       <h1 class="hero-info__h1"> A Simple Bookmark Manager </h1>
+       <p class="hero-info__p"> A clean and simple interface to organize your favourite websites. Open a new browser tab
+        and see your sites load instantly. Try it for free. </p>
+       <div class="hero-info__buttons--wrap"> <a href="" class="hero-button--chrome button blue">Get it on Chrome</a>
+        <a href="" class="hero-button--firefox button white">Get it on Firefox</a>
+       </div>
+      </div>
+     </div>
+     <div class="hero-image--wrap">
+      <img src="images/illustration-hero.svg" alt="image of the application interface" class="hero-img" />
+      <div class="hero-bg"></div>
+     </div>
+    </div>
+   </section>
+
+   <!-- Feature Tabs Section -->
+   <section class="features-section">
+    <div class="features-section--wrap">
+     <div class="features-header">
+      <div class="title--wrap">
+       <h2 class="features-header__h2">Features</h2>
+       <p class="features-header__p"> Our aim is to make it quick and easy for you to access your favourite websites.
+        Your bookmarks sync between your devices so you can access them on the go. </p>
+      </div>
+      <div class="tabs--wrap">
+       <ul class="tabs__ul">
+        <hr />
+        <li class="tabs__li" id="simple-li">
+         <button class="tab-links default button" id="simple--btn"> Simple Bookmarking </button>
+        </li>
+        <hr />
+        <li class="tabs__li" id="speedy-li">
+         <button class="tab-links button" id="speedy--btn"> Speedy Searching </button>
+        </li>
+        <hr />
+        <li class="tabs__li" id="easy-li">
+         <button class="tab-links button" id="easy--btn"> Easy Sharing </button>
+        </li>
+        <hr />
+       </ul>
+      </div>
+     </div>
+     <div class="features--grid">
+      <div class="features__images">
+       <img src="images/illustration-features-tab-1.svg" alt="feature image 1" class="feature-img simple active" id="simple-img" />
+       <img src="images/illustration-features-tab-2.svg" alt="feature image 2" class="feature-img" id="speedy-img" />
+       <img src="images/illustration-features-tab-3.svg" alt="feature image 3" class="feature-img" id="easy-img" />
+       <div class="features__bg"></div>
+      </div>
+      <div class="features__info">
+
+       <!-- Simple bookmarking info box -->
+       <div class="info--wrap active" id="simple-info">
+        <h2 class="info__h2"> Bookmark in one click </h2>
+        <p class="info__p"> Organize your bookmarks however you like. Our simple drag-and-drop interface gives you
+         complete control over how you manage your favourite sites. </p>
+        <a href="" class="features__btn button blue">More Info</a>
+       </div>
+
+       <!-- Speedy searching info box -->
+       <div class="info--wrap" id="speedy-info">
+        <h2 class="info__h2">Intelligent search</h2>
+        <p class="info__p"> Our powerful search feature will help you find saved sites in no time at all. No need to
+         trawl through all of your bookmarks. </p>
+        <a href="" class="features__btn button blue">More Info</a>
+       </div>
+       
+       <!-- Easy sharing info box -->
+       <div class="info--wrap" id="easy-info">
+        <h2 class="info__h2"> Share your bookmarks </h2>
+        <p class="info__p"> Easily share your bookmarks and collections with others. Create a shareable link that you
+         can send at the click of a button. </p>
+        <a href="" class="features__btn button blue">More Info</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- Download Section -->
+   <section class="download-section--wrap">
+    <div class="download-section">
+     <div class="download-section__header">
+      <h2 class="download-section__h2"> Download the extension </h2>
+      <p class="download-section__p"> We’ve got more browsers in the pipeline. Please do let us know if you’ve got a
+       favourite you’d like us to prioritize. </p>
+     </div>
+
+     <!-- Cards -->
+     <div class="download-section__card--wrap">
+
+      <!-- Chrome card -->
+      <div class="card-container chrome-container">
+       <div class="card">
+        <img src="images/logo-chrome.svg" alt="google chrome logo" class="card__img" />
+        <div class="card__info--wrap">
+         <h3 class="info__h3">Add to Chrome</h3>
+         <p class="info__p"> Minimum version 62 </p>
+        </div>
+        <img src="images/bg-dots.svg" alt="dots" class="card__bg" />
+        <a href="" class="card__button button blue">Add & Install Extension</a>
+       </div>
+      </div>
+
+      <!-- Firefox card -->
+      <div class="card-container firefox-container">
+       <div class="card margin">
+        <img src="images/logo-firefox.svg" alt="firefox logo" class="card__img" />
+        <div class="card__info--wrap">
+         <h3 class="info__h3">Add to Firefox</h3>
+         <p class="info__p"> Minimum version 55 </p>
+        </div> <img src="images/bg-dots.svg" alt="dots" class="card__bg" />
+        <a href="" class="card__button button blue">Add & Install Extension</a>
+       </div>
+      </div>
+
+      <!-- Opera card -->
+      <div class="card-container opera-container">
+       <div class="card"><img src="images/logo-opera.svg" alt="opera browser logo" class="card__img" />
+        <div class="card__info--wrap">
+         <h3 class="info__h3">Add to Opera</h3>
+         <p class="info__p"> Minimum version 46 </p>
+        </div> <img src="images/bg-dots.svg" alt="dots" class="card__bg" />
+        <a href="" class="card__button button blue">Add & Install Extension</a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+
+   <!-- FAQs Section -->
+   <section class="faq-section">
+    <div class="faq-section--wrap">
+     <div class="faq-section-header--wrap">
+      <h2 class="faq__h2">Frequently Asked Questions</h2>
+      <p class="faq__p">
+       Here are some of our FAQs. If you have any other questions you’d like answered please feel free to email us.
+      </p>
+     </div>
+
+     <div class="accordion--wrap">
+      
+        <!-- Question 1 -->
+      <hr />
+      <button class="accordion">What is Bookmark?</button>
+      <div class="panel">
+       <p class="panel__p">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt justo eget ultricies fringilla. Phasellus
+        blandit ipsum quis quam ornare mattis.
+       </p>
+      </div>
+
+      <!-- Question 2 -->
+      <hr />
+      <button class="accordion">
+       How can I request a new browser?
+      </button>
+      <div class="panel">
+       <p class="panel__p">
+        Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+        luctus eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdie tVivamus luctus 
+        eros aliquet convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse imperdiet.
+       </p>
+      </div>
+
+      <!-- Question 3 -->
+      <hr />
+      <button class="accordion">
+       Is there a mobile app?
+      </button>
+      <div class="panel">
+       <p class="panel__p">
+        Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum dolor, ut condimentum urna vulputate eget. 
+        Cras in ligula quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.
+       </p>
+      </div>
+
+      <!-- Question 4 -->
+      <hr />
+      <button class="accordion">
+       What about other Chromium browsers?
+      </button>
+      <div class="panel">
+       <p class="panel__p">
+        Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+        gravida pellentesque non ut velit.
+       </p>
+      </div>
+      <hr />
+     </div>
+
+     <a href="" class="more-info button blue">More Info</a>
+    </div>
+   </section>
+
+   <!-- Sign up section -->
+   <section class="sign-up-section">
+    <div class="sign-up-section--wrap">
+     <p class="sign-up__p">35,000+ ALREADY JOINED</p>
+     <h2 class="sign-up__h2">
+      Stay up-to-date with what we're doing
+     </h2>
+     <div class="contact--wrap">
+      <div class="input--wrap">
+       <input placeholder="Enter your email address" type="email" class="contact__input" />
+       <img src="images/icon-error.svg" alt="error icon" class="error-img" />
+      </div>
+      <button class="button contact__btn red">
+       Contact Us
+      </button>
+     </div>
+    </div>
+   </section>
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+   <div class="footer--wrap">
+    <div class="logo-and-links--wrap">
+     <a href="#header">
+      <img src="images/logo-bookmark-white.svg" alt="bookmark logo" class="footer__logo" />
+     </a>
+     <ul class="footer__ul">
+      <li class="footer__li">
+       <a href="#!" class="footer__links">FEATURES</a>
+      </li>
+      <li class="footer__li">
+       <a href="#!" class="footer__links">PRICING</a>
+      </li>
+      <li class="footer__li">
+       <a href="#!" class="footer__links">CONTACT</a>
+      </li>
+     </ul>
+    </div>
+    <div class="social--wrap">
+     <a href="" alt="facebook logo">
+      <i class="fab fa-facebook-square fa-lg facebook-icon"></i>
+     </a>
+     <a href="" alt="twitter logo">
+      <i class="fab fa-twitter fa-lg twitter-icon"></i>
+     </a>
+    </div>
+   </div>
+  </footer>
+ </div>
+ <!-- Website-grid ends-->
+ <script type="module" src="js/script.js"></script>
+</body>
+
+</html>

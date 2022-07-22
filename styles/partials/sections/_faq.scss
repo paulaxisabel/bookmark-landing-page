@@ -1,0 +1,83 @@
+.faq-section {
+    min-height: 65.5rem;
+
+    @include mobileSize {
+        min-height: 600px;
+    }
+}
+
+.faq-section--wrap {
+    // background: rgba(240, 128, 128, 0.432);
+    // outline: solid red 2px;
+    padding: $margin;
+    @include flexCenter(column);
+
+    .faq-section-header--wrap {
+        // outline: solid black 2px;
+        text-align: center;
+        max-width: 550px;
+
+        .faq__p {
+            max-width: 45ch;
+        }
+    }
+
+    .accordion--wrap {
+        // background: lightgreen;
+        margin-top: 2em;
+        max-width: 550px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        hr {
+            height: 1px;
+            border: solid 1px rgb(236, 236, 236);
+        }
+
+        // this is the button element
+        .accordion {
+            background: none;
+            padding: 1em 0;
+            text-align: start;
+            border: none;
+            cursor: pointer;
+            font-family: "Rubik", sans-serif;
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
+            position: relative;
+            transition: color 0.25s;
+            color: color(neutral-very-dark-blue);
+
+            &:hover {
+                color: color(primary-red);
+            }
+
+            &::after {
+                content: url("../images/icon-arrow.svg");
+                position: absolute;
+                right: 1rem;
+
+                transition: transform 0.15s ease-out;
+
+                @include mobileSize {
+                    right: 0;
+                }
+            }
+
+            &.active::after {
+                content: url("../images/icon-arrow-active.svg");
+                transform: rotate(180deg);
+            }
+        }
+
+        .panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.25s ease-in-out;
+
+            &__p {
+                margin: 0 0 1em 0;
+            }
+        }
+    }
+}

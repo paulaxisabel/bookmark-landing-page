@@ -1,0 +1,273 @@
+.features-section {
+    padding: 2em 0;
+    // margin: $margin;
+}
+
+.features-header {
+    // outline: solid green 2px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 $margin;
+
+    .title--wrap {
+        // outline: solid yellow 2px;
+        @include flexCenter(column);
+    }
+
+    &__p {
+        max-width: 47ch;
+        text-align: center;
+    }
+
+    &__h2 {
+        text-align: center;
+        font-size: clamp(2.4rem, 5vw, 3.2rem);
+    }
+}
+
+.tabs--wrap {
+    // outline: solid red 1px;
+    @include flexCenter();
+    margin-top: 2em;
+
+    hr {
+        display: none;
+        width: 100%;
+        border: solid rgb(223, 223, 223) 1px;
+        outline: none;
+
+        @include mobileSize {
+            display: block;
+        }
+    }
+
+    .tabs__ul {
+        display: flex;
+        list-style: none;
+        max-width: 70rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        @include mobileSize {
+            flex-wrap: wrap;
+        }
+
+        .tabs__li {
+            width: 100%;
+            position: relative;
+
+            // + .tabs__li {
+            //     margin-left: 2em;
+            // }
+
+            .tab-links {
+                width: 100%;
+                background: none;
+                box-shadow: none;
+                border: none;
+                font-family: "Rubik", sans-serif;
+                font-size: 1.6rem;
+                font-weight: 500;
+                padding: 1em;
+                cursor: pointer;
+                transition: border 0.25s, color 0.25s;
+                color: color(neutral-grayish-blue);
+
+                &.active {
+                    color: color(neutral-very-dark-blue);
+                }
+
+                &:hover {
+                    color: color(primary-red);
+                }
+
+                &.active::before {
+                    content: "";
+                    height: 3px;
+                    width: 100%;
+                    background: color(primary-red);
+                    bottom: -0.25em;
+                    left: 0px;
+                    position: absolute;
+
+                    @include mobileSize {
+                        width: 40%;
+                        left: 30%;
+                        bottom: -0.12em;
+                        height: 5px;
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    height: 3px;
+                    width: 100%;
+                    background: rgb(224, 224, 224);
+                    bottom: -0.25em;
+                    left: 0;
+                    position: absolute;
+                    transition: background 0.25s;
+
+                    @include mobileSize {
+                        width: 40%;
+                        left: 30%;
+                        bottom: -0.12em;
+                        background: none;
+                        height: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.features--grid {
+    margin-top: 2em;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 450px;
+    // grid-template-rows: minmax(1fr, 600px);
+
+    @include mobileSize {
+        grid-template-columns: 1fr;
+    }
+
+    // @media only screen and (max-width: 1200px) {
+    //     grid-template-rows: 450px;
+    // }
+
+    @media only screen and (max-width: 550px) {
+        grid-template-rows: 425px;
+    }
+
+    @media only screen and (max-width: 450px) {
+        grid-template-rows: 375px;
+    }
+
+    @media only screen and (max-width: 414px) {
+        grid-template-rows: 350px;
+    }
+
+    @media only screen and (max-width: 375px) {
+        grid-template-rows: 300px;
+    }
+
+    .features__images {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 1em 0 2em;
+        position: relative;
+
+        // margin-top: 1em;
+
+        @include mobileSize {
+            padding: 0em 2em;
+            // padding: 2em 0;
+            justify-content: center;
+            // align-items: center;
+        }
+
+        .feature-img {
+            object-fit: contain;
+            object-position: right;
+            width: 100%;
+            max-height: 400px;
+            max-width: 535px;
+            // margin-left: $margin;
+            // margin-right: 1em;
+            display: none;
+            animation: fadeIn 0.25s ease-in-out;
+
+            @include mobileSize {
+                object-position: unset;
+                // max-height: 320px;
+                // margin: 0 $margin;
+            }
+
+            // @media only screen and (max-width: 450px) {
+            //     max-height: 207px;
+            //     margin: 0;
+            // }
+
+            &.active {
+                display: block;
+            }
+        }
+
+        // this makes the first slide img show up even if javaScript is disabled
+        #simple-img.active {
+            display: block;
+        }
+
+        .features__bg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 72%;
+            width: 88%;
+            border-radius: 0 999px 999px 0;
+            background: color(primary-blue);
+            z-index: -1;
+
+            @media only screen and (max-width: 1200px) {
+                width: 85%;
+            }
+
+            @media only screen and (max-width: 950px) {
+                width: 70%;
+                height: 68%;
+            }
+
+            @media only screen and (max-width: 700px) {
+                width: 75%;
+            }
+
+            // @media only screen and (max-width: 1200px) {
+            //     height: 60%;
+            // }
+
+            // @media only screen and (max-width: 500px) {
+            //     height: 70%;
+            // }
+        }
+    }
+
+    .features__info {
+        @include flexCenter(column);
+        max-width: 600px;
+        margin-right: $margin;
+
+        @include mobileSize {
+            margin-right: 0;
+            margin-top: $margin;
+            max-width: unset;
+            text-align: center;
+        }
+
+        // this makes the first slide info show up even if javaScript is disabled
+        #simple-info.active {
+            display: block;
+        }
+
+        .info--wrap {
+            display: none;
+            margin: 0 1em;
+            animation: fadeIn 0.25s ease-in-out;
+
+            &.active {
+                display: block;
+            }
+
+            .info__p {
+                max-width: 38ch;
+            }
+
+            .info__h2 {
+                font-size: clamp(2.4rem, 5vw, 3.2rem);
+            }
+        }
+    }
+}

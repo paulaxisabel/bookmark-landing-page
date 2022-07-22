@@ -1,0 +1,45 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    // outline: solid red 1px;
+}
+
+body {
+    height: 100%;
+    font-size: 1.8rem;
+    font-family: "Rubik", sans-serif;
+
+    &.active {
+        overflow: hidden;
+    }
+}
+
+p {
+    line-height: 1.6;
+    color: color(neutral-grayish-blue);
+    margin-top: 1em;
+    font-size: clamp(1.5rem, 3vw, 1.8rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+    color: color(neutral-very-dark-blue);
+}
+
+img {
+    display: block;
+}

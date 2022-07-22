@@ -1,0 +1,103 @@
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 2em 0;
+
+    .hero-grid--container {
+        // margin-left: $margin;
+        width: 100%;
+
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: "info img";
+
+        @include mobileSize {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+            grid-template-areas:
+                "img"
+                "info";
+        }
+
+        .hero-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            // justify-content: center;
+            grid-area: info;
+            margin-left: $margin;
+
+            @include mobileSize {
+                align-items: center;
+                justify-content: center;
+                margin-left: 0;
+                margin: 0 $margin;
+            }
+
+            .hero-info--wrap {
+                // this makes it work
+                max-width: 550px;
+                // height: 100%;
+                margin-top: 3em;
+                @include mobileSize {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .hero-info__h1 {
+                    font-size: clamp(2.8rem, 7vw, 4.5rem);
+                    font-weight: 500;
+                    max-width: 20ch;
+
+                    @include mobileSize {
+                    }
+                }
+
+                .hero-info__p {
+                    color: color(neutral-grayish-blue);
+                    margin-top: 1em;
+                    // font-size: clamp(1.6rem, 3vw, 1.8rem);
+                    max-width: 45ch;
+                }
+            }
+        }
+
+        .hero-image--wrap {
+            grid-area: img;
+            // outline: solid yellow 4px;
+            position: relative;
+            z-index: -1;
+
+            @include mobileSize {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .hero-img {
+                width: 100%;
+                max-width: 650px;
+                // margin-left: 1.5em;
+                // margin-right: 1em;
+
+                @include mobileSize {
+                    padding: 0 0.7em;
+                }
+            }
+
+            .hero-bg {
+                background: color(primary-blue);
+                height: 65%;
+                width: 75%;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-radius: 999px 0 0 999px;
+                z-index: -1;
+            }
+        }
+    }
+}
